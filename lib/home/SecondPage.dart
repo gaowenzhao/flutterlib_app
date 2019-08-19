@@ -1,6 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'router/Routes.dart';
+import 'package:flutterlib_app/router/Routes.dart';
 class SecondPage extends StatefulWidget{
   final String title = "跳转到第一个界面";
   @override
@@ -18,7 +18,7 @@ class _SecondPageState extends State<SecondPage>{
       appBar: AppBar(title: Text("第二个界面")),
       body:  Center(child: FlatButton(onPressed: (){
         print("跳转到第一个界面");
-      Routes.router.navigateTo(context, '${Routes.firstPage}${widget.title}/hahah', transition: TransitionType.fadeIn).then((result){
+      Routes.router.navigateTo(context, '${Routes.firstPage}/${widget.title}/hahah', transition: TransitionType.fadeIn).then((result){
         setState(() {
           if(result!=null){
             _result = result;

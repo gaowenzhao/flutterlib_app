@@ -22,8 +22,9 @@ class ListViewItem extends StatelessWidget {
           child: Text(itemTitle),
         ),
         onTap: () {
-          Routes.router.navigateTo(context, '${Routes.secondPage}',
-              transition: TransitionType.fadeIn);
+//          Routes.router.navigateTo(context, "${Routes.webviewPage}/$itemTitle/$itemUrl",
+//              transition: TransitionType.fadeIn);
+          Routes.router.navigateTo(context, '${Routes.webviewPage}/$itemTitle/${Uri.encodeComponent(itemUrl)}', transition: TransitionType.fadeIn);
         },
         subtitle: Row(
           children: <Widget>[
