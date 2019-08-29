@@ -28,7 +28,8 @@ dependencies:
 
   flutterlib:
      path: ../flutterlib
-
+  flutter_plugin:
+     path: ../flutterPlugin
 
 dev_dependencies:
   flutter_test:

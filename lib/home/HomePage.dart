@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterlib/StatusBarUtils.dart';
+import 'package:flutter_plugin/flutter_plugin.dart';
 import 'FirstPage.dart';
 import 'FourthPage.dart';
 import 'SecondPage.dart';
@@ -33,8 +33,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   void initState() {
     super.initState();
     control = TabController(length: tabs.length, vsync: this);
+//    initPlatformState();
   }
-
+  void initPlatformState() async {
+    print("FlutterPlugin.battery=${await FlutterPlugin.battery}");
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
